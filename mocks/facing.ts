@@ -1,24 +1,24 @@
-const RoomsList = [
+const FacingList = [
   {
-    value: 'studio',
-    label: 'студия',
+    value: '1',
+    label: 'чистовая',
+    description: 'отделка стен и пола + сантехника',
   },
   {
-    value: 1,
-    label: 1,
+    value: '2',
+    label: 'без отделки',
+    description: 'без разводки коммуникаций и стяжки пола',
   },
   {
-    value: 2,
-    label: 2,
+    value: '3',
+    label: 'предчистовая (white box)',
+    description: 'стяжка пола + подготовка стен',
   },
   {
-    value: 3,
-    label: 3,
-  },
-  {
-    value: 4,
-    label: '4+',
+    value: '4',
+    label: 'под ключ / с мебелью',
+    description: 'отделка + сантехника + мебель',
   },
 ];
 
-export default RoomsList;
+export default FacingList;

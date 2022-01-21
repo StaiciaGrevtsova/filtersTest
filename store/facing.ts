@@ -1,22 +1,22 @@
 export const state = () => ({
-  rooms: [],
-  checkedRooms: [],
+  facingList: [],
+  checkedFacing: [],
 })
 
 export const getters = {
-  getRooms(state: Record<any, any>) {
-    return state.rooms;
+  getFacingList(state: Record<any, any>) {
+    return state.facingList;
   },
   getChecked(state: Record<any, any>) {
-    return state.checkedRooms;
+    return state.checkedFacing;
   }
 }
 
 export const actions = {
-  async getRoomsFilterList({ commit }: Record<any, any>) {
-    await (this as any).$axios.$get('/rooms')
+  async getFacingFilterList({ commit }: Record<any, any>) {
+    await (this as any).$axios.$get('/facing')
       .then((response: any) => {
-        commit('SET_ROOMS_LIST', response);
+        commit('SET_FACING_LIST', response);
         return response;
       })
       .catch((error: any) => {
@@ -27,10 +27,10 @@ export const actions = {
 }
 
 export const mutations = {
-  SET_ROOMS_LIST(state: { rooms: any; }, rooms: any) {
-    state.rooms = rooms;
+  SET_FACING_LIST(state: { facingList: any; }, facingList: any) {
+    state.facingList = facingList;
   },
-  SET_CHECKED_ROOMS(state: { checkedRooms: any; }, checkedRooms: any) {
-    state.checkedRooms = checkedRooms;
+  SET_CHECKED_FACING(state: { checkedFacing: any; }, checkedFacing: any) {
+    state.checkedFacing = checkedFacing;
   },
 }
